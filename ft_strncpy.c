@@ -6,9 +6,12 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:03:12 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/21 13:53:34 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/22 11:22:45 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, const char *src, size_t len)
 {

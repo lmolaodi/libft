@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 14:25:18 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/22 16:15:09 by lmolaodi         ###   ########.fr       */
+/*   Created: 2019/05/22 11:43:19 by lmolaodi          #+#    #+#             */
+/*   Updated: 2019/05/22 12:41:35 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft"
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	int		i;
-	char	*dest;
-	char	*src;
+	size_t i;
+	size_t j;
 
-	dest = (char *)dst;
-	src = (char *)src;
-	while (i < n)
-	{
-		dst[i] = src[i];
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
 		i++;
+	while (s2[j] != '\0' && j < n)
+	{
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (dst);
+	s1[i + j] = '\0';
+	return (s1);
 }
