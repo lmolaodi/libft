@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:32:51 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/23 12:36:09 by lmolaodi         ###   ########.fr       */
+/*   Created: 2019/05/24 13:00:02 by lmolaodi          #+#    #+#             */
+/*   Updated: 2019/05/24 15:38:43 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <string.h>
 
-int	ft_isascii(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	int i;
+
+	i = 0;
+	while (s != '\0')
+	{
+		i = *s++;
+		if (*s == c)
+			return ((char *)s);
+		if (*s == '\0')
+			return (NULL);
+	}
 	return (0);
 }

@@ -6,12 +6,11 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:57:45 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/22 11:18:51 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:39:10 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

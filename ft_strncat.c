@@ -6,12 +6,11 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:43:19 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/22 12:41:35 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:40:25 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {

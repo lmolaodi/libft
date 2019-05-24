@@ -6,13 +6,12 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:30:01 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/22 11:20:17 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:39:33 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
-#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
