@@ -6,13 +6,13 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:42:38 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/23 12:38:28 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:28:43 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;
