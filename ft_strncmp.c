@@ -6,26 +6,33 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:32:22 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/27 15:26:33 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/30 16:05:10 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (s2[i] != '\0')
+	while (n > 0)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (s1[i] == s2[i])
+			i++;
+		n--;
 	}
-	if (i < n && (s1[i] == '\0' && s2[i] != '\0'))
-		return (s1[i] - s2[i]);
-	else if (i < n && (s2[i] == '\0' && s1[i] != '\0'))
-		return (s1[i] - s2[i]);
+	return (0);
+}
+int	main(void)
+{
+	char name[] = "lehlogonolo";
+	char name2[] = "lehlohonolo";
+
+	printf("%d\n", ft_strncmp(name,name2,11));
 	return (0);
 }
