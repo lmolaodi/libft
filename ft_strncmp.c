@@ -6,12 +6,11 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:32:22 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/30 16:05:10 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/05/31 12:58:01 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -26,13 +25,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			i++;
 		n--;
 	}
-	return (0);
-}
-int	main(void)
-{
-	char name[] = "lehlogonolo";
-	char name2[] = "lehlohonolo";
-
-	printf("%d\n", ft_strncmp(name,name2,11));
 	return (0);
 }
