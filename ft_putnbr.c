@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 10:57:16 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/04 12:54:38 by lmolaodi         ###   ########.fr       */
+/*   Created: 2019/06/04 12:54:50 by lmolaodi          #+#    #+#             */
+/*   Updated: 2019/06/04 13:02:37 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_putnbr(int n)
 {
-	size_t i;
+	int nbr;
 
-	i = 0;
-	if (n == '\0')
-		return (1);
-	if (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	if (n < 0)
 	{
-		while (n > 0)
-		{
-			if (s1[i] != s2[i])
-				return (0);
-			i++;
-			n--;
-		}
-		return (1);
+		ft_putchar('-');
+		nbr = n * -1;
 	}
-	return (0);
+	else
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + 48);
 }

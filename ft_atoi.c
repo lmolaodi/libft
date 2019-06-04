@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 10:57:16 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/04 12:54:38 by lmolaodi         ###   ########.fr       */
+/*   Created: 2019/06/04 12:40:52 by lmolaodi          #+#    #+#             */
+/*   Updated: 2019/06/04 12:53:39 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+int	ft_atoi(const char *str)
 {
-	size_t i;
+	int i;
+	int j;
+	int res;
 
 	i = 0;
-	if (n == '\0')
-		return (1);
-	if (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	j = 1;
+	res = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+		j = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0' && ft_isdigit(str[i]))
 	{
-		while (n > 0)
-		{
-			if (s1[i] != s2[i])
-				return (0);
-			i++;
-			n--;
-		}
-		return (1);
+		res = res * 10 + str[i] - '0';
+		i++;
 	}
-	return (0);
+	return (j * res);
 }

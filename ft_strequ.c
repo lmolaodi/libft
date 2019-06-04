@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 10:24:58 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/01 10:56:39 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/04 12:47:38 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	return(ft_strcmp(s1, s2) ? 0 : 1);
+	int i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i] ? 0 : 1);
 }
