@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 10:56:32 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/31 11:10:27 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:39:39 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_memalloc(size_t size)
 	str = malloc(size);
 	if (str == NULL)
 		return (NULL);
-	ft_bzero(str,size);
+	ft_bzero(str, size);
 	return (str);
 }

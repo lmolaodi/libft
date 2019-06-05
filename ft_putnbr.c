@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 12:54:50 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/04 13:02:37 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:11:59 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(int n)
 {
-	int nbr;
+	unsigned int nbr;
 
 	if (n < 0)
 	{
