@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:56:33 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/03 15:37:34 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:05:34 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,8 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 int	ft_atoi(const char *nptr);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void(*f)(unsigned int, char *));
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
