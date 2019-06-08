@@ -6,13 +6,14 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:56:33 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/07 12:57:21 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/08 13:34:20 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __LIBFT_H__
 #define __LIBFT_H__
 #include <string.h>
+#include <stdlib.h>
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
@@ -21,7 +22,7 @@ int	ft_isdigit(int c);
 int	ft_isprint(int c);
 char	*ft_strcat(char *s1, const char *s2);
 int	ft_strcmp(const char *s1, const char *s2);
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcpy(char *dest, char const *src);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -61,5 +62,6 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void(*f)(unsigned int, char *));
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
