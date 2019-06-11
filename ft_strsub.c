@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 11:15:51 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/01 11:34:34 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:30:57 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
 	str = ft_strnew(len);

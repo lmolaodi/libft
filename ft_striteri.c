@@ -6,16 +6,16 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 12:53:46 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/06 13:01:16 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:24:51 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int , char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 
 	i = 0;
-	if(s[i] != '\0' && f)
+	if (s[i] != '\0' && f)
 	{
 		while (s[i] != '\0')
 		{

@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 11:19:27 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/08 14:06:28 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:26:12 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*str;
-	int	len;
-	int i;
+	char	*str;
+	int		len;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
