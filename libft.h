@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:56:33 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/11 15:28:07 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/12 15:31:51 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s);
+char	*ft_itoa(int n);
 
 #endif
