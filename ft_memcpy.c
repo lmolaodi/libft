@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:25:18 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/27 15:27:55 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/17 10:32:35 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		dest[i] = surc[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }
