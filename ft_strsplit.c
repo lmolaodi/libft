@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 10:27:21 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/18 11:59:08 by lmolaodi         ###   ########.fr       */
+/*   Created: 2019/06/18 10:08:40 by lmolaodi          #+#    #+#             */
+/*   Updated: 2019/06/18 11:46:44 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	**ft_strsplit(char const *s, char c)
 {
-	char	*str;
-	int		len;
-	int		i;
+	char	**str;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
 	i = 0;
-	len = ft_strlen(s);
-	str = ft_memalloc(len);
+	j = 0;
+	if (!(str = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1))))
+		return (0);
 	while (s[i] != '\0')
 	{
-		str[i] = f(s[i]);
-		i++;
+		if (s[i] == c)
+			i++;
+		else
+		{
+			len = 0;
+			while (s[len + i] && (s[len + i] != c))
+				len++;
+			str[j] = ft_strsub(s, i, len);
+			i = i + len;
+			j++;
+		}
 	}
+	str[j] = 0;
 	return (str);
 }
