@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 12:25:32 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/05/27 16:25:13 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:53:22 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return ((unsigned char)str[i] - (unsigned char)str2[i]);
 		i++;
 	}
-	if (i < n && (str[i] == '\0' && str2[i] != '\0'))
-		return ((unsigned char)str[i] - (unsigned char)str2[i]);
-	else if (str2[i] == '\0' && str[i] != '\0')
+	if (i < n && (str[i] != str2[i]))
 		return ((unsigned char)str[i] - (unsigned char)str2[i]);
 	return (0);
 }

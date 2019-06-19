@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:27:21 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/18 11:59:08 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/19 15:59:38 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,17 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = 0;
-	len = ft_strlen(s);
-	str = ft_memalloc(len);
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		str[i] = f(s[i]);
-		i++;
+		len = ft_strlen(s);
+		if (!(str = ft_memalloc(len + 1)))
+			return (NULL);
+		while (s[i] != '\0')
+		{
+			str[i] = f(s[i]);
+			i++;
+		}
+		return (str);
 	}
-	return (str);
+	return (0);
 }

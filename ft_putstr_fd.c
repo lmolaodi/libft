@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 11:55:02 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/18 12:01:23 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/06/19 16:23:25 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ void	ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
-	if (s[i] != '\0')
+	if (s && fd)
 	{
-		write(fd, s, ft_strlen(s));
+		if (s[i] != '\0')
+		{
+			write(fd, s, ft_strlen(s));
+		}
 	}
 }
