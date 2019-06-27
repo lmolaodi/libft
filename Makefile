@@ -6,7 +6,7 @@
 #    By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/11 11:15:35 by lmolaodi          #+#    #+#              #
-#    Updated: 2019/06/20 15:20:39 by lmolaodi         ###   ########.fr        #
+#    Updated: 2019/06/27 14:18:00 by lmolaodi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ $(NAME):
 	gcc -c $(NORM) $(SRC)
 	ar rc $(NAME) $(OBJ)
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 fclean: clean
-	rm -f libft.a
+	rm -f $(NAME)
 re: fclean all
